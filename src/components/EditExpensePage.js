@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { editExpense, startRemoveExpense } from '../actions/expenses';
+import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 
 // Refactored code with class based component
 // allows to pull out in-line functions to methods...
@@ -11,7 +11,7 @@ export class EditExpensePage extends React.Component {
   onSubmit = (expense) => {
     //'expense' are the updates
     // props.dispatch(editExpense(props.expense.id, expense));
-    this.props.editExpense(this.props.expense.id, expense)
+    this.props.startEditExpense(this.props.expense.id, expense)
     this.props.history.push('/');
   };
   onRemove = () => {
@@ -46,7 +46,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (dispatch, props) => ({
   // define props that will be able to call dispatch
-  editExpense: (id, expense) => dispatch(editExpense(id, expense)),
+  startEditExpense: (id, expense) => dispatch(startEditExpense(id, expense)),
   startRemoveExpense: (data) => dispatch(startRemoveExpense(data))
 });
 

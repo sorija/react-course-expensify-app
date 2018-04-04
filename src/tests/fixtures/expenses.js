@@ -1,7 +1,5 @@
 import moment from 'moment';
 
-// fixture is a test data
-
 export default [{
   id: '1',
   description: 'Gum',
