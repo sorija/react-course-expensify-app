@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  // target all direct children
+  > * {
+    margin-bottom: $M-size;
+  }
+}
+
+.form__error {
+  margin: 0 0 $M-size 0;
+  font-style: italic;
+}
+
+.button--secondary {
+  background: #888;
+}

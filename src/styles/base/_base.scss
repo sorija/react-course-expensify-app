@@ -1,11 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-  //to work with rem with 10 base system
-  //1rem=16px, 16 * .625 = 10
   font-size: 62.5%;
 }
+
 body {
+  color: $dark-grey;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: $M-size; //16px
+  font-size: $M-size;
+  line-height: 1.6;
 }
 
 button {
